@@ -31,24 +31,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrimerTP));
             this.gbxArticulos = new System.Windows.Forms.GroupBox();
-            this.cbxRubros = new System.Windows.Forms.ComboBox();
-            this.btnMostrar = new System.Windows.Forms.Button();
-            this.btnExportar = new System.Windows.Forms.Button();
-            this.lblRubro = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblRubro = new System.Windows.Forms.Label();
+            this.btnExportar = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.cbxRubros = new System.Windows.Forms.ComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aCercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxArticulos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxArticulos
@@ -56,7 +56,7 @@
             this.gbxArticulos.BackColor = System.Drawing.Color.Transparent;
             this.gbxArticulos.Controls.Add(this.lblTotal);
             this.gbxArticulos.Controls.Add(this.lblCantidad);
-            this.gbxArticulos.Controls.Add(this.dataGridView1);
+            this.gbxArticulos.Controls.Add(this.dgvArticulos);
             this.gbxArticulos.Controls.Add(this.lblRubro);
             this.gbxArticulos.Controls.Add(this.btnExportar);
             this.gbxArticulos.Controls.Add(this.btnMostrar);
@@ -67,80 +67,42 @@
             this.gbxArticulos.TabIndex = 0;
             this.gbxArticulos.TabStop = false;
             // 
-            // cbxRubros
+            // lblTotal
             // 
-            this.cbxRubros.FormattingEnabled = true;
-            this.cbxRubros.Location = new System.Drawing.Point(91, 19);
-            this.cbxRubros.Name = "cbxRubros";
-            this.cbxRubros.Size = new System.Drawing.Size(121, 21);
-            this.cbxRubros.TabIndex = 0;
+            this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(433, 330);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(132, 23);
+            this.lblTotal.TabIndex = 6;
             // 
-            // btnMostrar
+            // lblCantidad
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(253, 19);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(136, 23);
-            this.btnMostrar.TabIndex = 1;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.lblCantidad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantidad.ForeColor = System.Drawing.Color.White;
+            this.lblCantidad.Location = new System.Drawing.Point(139, 330);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(132, 23);
+            this.lblCantidad.TabIndex = 5;
             // 
-            // btnExportar
+            // dgvArticulos
             // 
-            this.btnExportar.Location = new System.Drawing.Point(429, 19);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(136, 23);
-            this.btnExportar.TabIndex = 2;
-            this.btnExportar.Text = "Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            // 
-            // lblRubro
-            // 
-            this.lblRubro.AutoSize = true;
-            this.lblRubro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRubro.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRubro.Location = new System.Drawing.Point(36, 21);
-            this.lblRubro.Name = "lblRubro";
-            this.lblRubro.Size = new System.Drawing.Size(49, 17);
-            this.lblRubro.TabIndex = 3;
-            this.lblRubro.Text = "Rubro:";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salirToolStripMenuItem,
-            this.aCercaDeToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(648, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
+            this.dgvArticulos.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvArticulos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvArticulos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Descripcion,
             this.Costo,
             this.Stock,
             this.Valor});
-            this.dataGridView1.Location = new System.Drawing.Point(39, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 246);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvArticulos.Location = new System.Drawing.Point(39, 66);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.Size = new System.Drawing.Size(526, 246);
+            this.dgvArticulos.TabIndex = 4;
             // 
             // Codigo
             // 
@@ -172,23 +134,62 @@
             this.Valor.Name = "Valor";
             this.Valor.ReadOnly = true;
             // 
-            // lblCantidad
+            // lblRubro
             // 
-            this.lblCantidad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCantidad.ForeColor = System.Drawing.Color.White;
-            this.lblCantidad.Location = new System.Drawing.Point(139, 330);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(132, 23);
-            this.lblCantidad.TabIndex = 5;
+            this.lblRubro.AutoSize = true;
+            this.lblRubro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRubro.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRubro.Location = new System.Drawing.Point(36, 21);
+            this.lblRubro.Name = "lblRubro";
+            this.lblRubro.Size = new System.Drawing.Size(49, 17);
+            this.lblRubro.TabIndex = 3;
+            this.lblRubro.Text = "Rubro:";
             // 
-            // lblTotal
+            // btnExportar
             // 
-            this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(433, 330);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(132, 23);
-            this.lblTotal.TabIndex = 6;
+            this.btnExportar.Location = new System.Drawing.Point(429, 19);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(136, 23);
+            this.btnExportar.TabIndex = 2;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(253, 19);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(136, 23);
+            this.btnMostrar.TabIndex = 1;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
+            // cbxRubros
+            // 
+            this.cbxRubros.FormattingEnabled = true;
+            this.cbxRubros.Location = new System.Drawing.Point(91, 19);
+            this.cbxRubros.Name = "cbxRubros";
+            this.cbxRubros.Size = new System.Drawing.Size(121, 21);
+            this.cbxRubros.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem,
+            this.aCercaDeToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(648, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // aCercaDeToolStripMenuItem
             // 
@@ -212,9 +213,9 @@
             this.Load += new System.EventHandler(this.frmPrimerTP_Load);
             this.gbxArticulos.ResumeLayout(false);
             this.gbxArticulos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +232,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
