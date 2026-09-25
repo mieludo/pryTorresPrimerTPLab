@@ -31,10 +31,7 @@ namespace pryTorresPrimerTPLab
             Double valortotal,
             String rubro)
         {
-            StreamWriter SW = new StreamWriter(
-                "../../Archivos/reporte_" + rubro.ToLower() + ".csv",
-                false,
-                Encoding.UTF8);
+            StreamWriter SW = new StreamWriter("../../Archivos/reporte_" + rubro.ToLower() + ".csv", false, Encoding.UTF8);
 
             SW.WriteLine("Código;Descripción;Costo;Stock;Valor en Stock");
 
